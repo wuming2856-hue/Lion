@@ -1,0 +1,218 @@
+# Loon 最小配置
+# Date: 2025-09-01 00:00:44
+# Author: https://t.me/iKeLee
+# 更多插件可前往 https://hub.kelee.one 安装
+
+[General]
+ip-mode = dual
+ipv6-vif = off
+dns-server = system
+sni-sniffing = true
+disable-stun = true
+dns-reject-mode = LoopbackIP
+domain-reject-mode = DNS
+udp-fallback-mode = REJECT
+wifi-access-http-port = 7222
+wifi-access-socks5-port = 7221
+allow-wifi-access = false
+interface-mode = auto
+test-timeout = 2
+disconnect-on-policy-change = false
+internet-test-url = http://connectivitycheck.platform.hicloud.com/generate_204
+proxy-test-url = http://www.gstatic.com/generate_204
+resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
+geoip-url = https://geodata.kelee.one/Country-Masaiki.mmdb
+ipasn-url = https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb
+skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com
+bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
+#电报不转圈
+[Proxy]
+
+[Remote Proxy]
+Svcloud = https://guigusub.xxqqx.cn/s/e24023a08a8e891673f6ea25ce3e312c,parser-enabled = true,udp=true,block-quic=false,fast-open=default,vmess-aead=true,skip-cert-verify=true,enabled=true,flexible-sni=false,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Area.png
+XTcloud = https://data.xtcloud.org/api/v1/client/subscribe?token=30da5d6c915e6079650693a24a0d8893&name=XTcloud,udp=true,block-quic=false,fast-open=default,vmess-aead=true,skip-cert-verify=true,enabled=true,flexible-sni=false,img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/ProtonVPN.png
+
+[Remote Filter]
+香港节点 = NameRegex, FilterKey = "^(?=.*((?i)🇭🇰|香港|(\b(HK|HKG|Hong)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+台湾节点 = NameRegex, FilterKey = "^(?=.*((?i)🇹🇼|台湾|(\b(TW|TWN|Tai|Taiwan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+日本节点 = NameRegex, FilterKey = "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|JPN|Japan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+韩国节点 = NameRegex, FilterKey = "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|KOR|Korea)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+新国节点 = NameRegex, FilterKey = "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|SGP|Singapore)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+美国节点 = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|USA|United States)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+英国节点 = NameRegex, FilterKey = "^(?=.*(🇬🇧|英|伦敦|(?i)UK|United Kingdom))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$"
+澳门节点 = NameRegex, FilterKey = "^(?=.*((?i)🇲🇴|澳门|(\b(MO|MAC|Macau)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+巴西节点 = NameRegex, FilterKey = "^(?=.*((?i)🇧🇷|巴西|圣保罗|(\b(BR|BRA|Brazil|SaoPaulo)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+德国节点 = NameRegex, FilterKey = "^(?=.*((?i)🇩🇪|德国|柏林|法兰克福|(\b(DE|GER|Germany|Berlin|Frankfurt)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+马来西亚节点 = NameRegex, FilterKey = "^(?=.*((?i)🇲🇾|马来西亚|大马|(\b(MY|MYS|Malaysia|KualaLumpur)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+泰国节点 = NameRegex, FilterKey = "^(?=.*((?i)🇹🇭|泰国|曼谷|(\b(TH|THA|Thailand|Bangkok)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+荷兰节点 = NameRegex, FilterKey = "^(?=.*((?i)🇳🇱|荷兰|阿姆斯特丹|(\b(NL|NLD|Netherlands|Amsterdam)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+尼日利亚节点 = NameRegex, FilterKey = "^(?=.*((?i)🇳🇬|尼日利亚|拉各斯|(\b(NG|NGA|Nigeria|Lagos)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+土耳其节点 = NameRegex, FilterKey = "^(?=.*((?i)🇹🇷|土耳其|伊斯坦布尔|(\b(TR|TUR|Turkey|Istanbul)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+乌克兰节点 = NameRegex, FilterKey = "^(?=.*((?i)🇺🇦|乌克兰|基辅|(\b(UA|UKR|Ukraine|Kyiv|Kiev)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+印度节点 = NameRegex, FilterKey = "^(?=.*((?i)🇮🇳|印度|孟买|德里|(\b(IN|IND|India|Mumbai|Delhi)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+澳大利亚节点 = NameRegex, FilterKey = "^(?=.*((?i)🇦🇺|澳大利亚|澳洲|悉尼|墨尔本|(\b(AU|AUS|Australia|Sydney|Melbourne)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+新西兰节点 = NameRegex, FilterKey = "^(?=.*((?i)🇳🇿|新西兰|奥克兰|惠灵顿|(\b(NZ|NZL|NewZealand|Auckland|Wellington)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+联合国节点 = NameRegex, FilterKey = "^(?=.*((?i)🇺🇳|联合国|(\b(UN|UnitedNations)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+菲律宾节点 = NameRegex, FilterKey = "^(?=.*(🇵🇭|菲|大马|\\bPH\\b|Philippines))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
+游戏节点 = NameRegex, FilterKey = "^(?=.*((?i)游戏|🎮|(\b(GAME)(\d+)?\b)))(?!.*((?i)回国|校园)).*$"
+全球节点 = NameRegex, FilterKey = "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|超时|收藏|福利|邀请|好友|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic)(\d+)?\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$"
+
+[Proxy Group]
+# 手动策略组
+香港手动策略 = select,香港节点,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+台湾手动策略 = select,台湾节点,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+日本手动策略 = select,日本节点,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+韩国手动策略 = select,韩国节点,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
+新国手动策略 = select,新国节点,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+美国手动策略 = select,美国节点,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+英国手动策略 = select,英国节点,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_Kingdom.png
+# 荷兰
+荷兰手动策略 = select,荷兰节点,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Netherlands.png
+# 澳门
+澳门手动策略 = select,澳门节点,img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Flag_icon/120px/MO.png
+# 巴西
+巴西手动策略 = select,巴西节点,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Brazil.png
+# 德国
+德国手动策略 = select,德国节点,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Germany.png
+# 马来西亚
+马来西亚手动策略 = select,马来西亚节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Malaysia.png
+# 泰国
+泰国手动策略 = select,泰国节点,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Thailand.png
+# 尼日利亚
+尼日利亚手动策略 = select,尼日利亚节点,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Nigeria.png
+# 土耳其
+土耳其手动策略 = select,土耳其节点,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Turkey.png
+# 乌克兰
+乌克兰手动策略 = select,乌克兰节点,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Ukraine.png
+# 印度
+印度手动策略 = select,印度节点,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/India.png
+# 澳大利亚
+澳大利亚手动策略 = select,澳大利亚节点,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Australia.png
+新西兰手动策略 = select,新西兰节点,img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Flag_icon/120px/NZ.png
+# 联合国
+联合国手动策略 = select,联合国节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
+菲律宾手动策略 = select,菲律宾节点,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Philippines.png
+游戏手动策略 = select,游戏节点,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/GAME.png
+全球手动策略 = select,全球节点,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
+# --------------------------------
+# 时延优选策略组
+香港时延优选 = url-test,香港节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+台湾时延优选 = url-test,台湾节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+日本时延优选 = url-test,日本节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+韩国时延优选 = url-test,韩国节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
+新国时延优选 = url-test,新国节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+美国时延优选 = url-test,美国节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+英国时延优选 = url-test,英国节点,url = http://www.gstatic.com/generate_204,interval = 60,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_Kingdom.png
+菲律宾时延优选 = url-test,菲律宾节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Philippines.png
+# --------------------------------
+荷兰时延优选 = url-test,荷兰节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Netherlands.png
+澳门时延优选 = url-test,澳门节点,interval = 60,tolerance = 50,img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Flag_icon/120px/MO.png
+巴西时延优选 = url-test,巴西节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Brazil.png
+德国时延优选 = url-test,德国节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Germany.png
+马来西亚时延优选 = url-test,马来西亚节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Malaysia.png
+泰国时延优选 = url-test,泰国节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Thailand.png
+尼日利亚时延优选 = url-test,尼日利亚节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Nigeria.png
+土耳其时延优选 = url-test,土耳其节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Turkey.png
+乌克兰时延优选 = url-test,乌克兰节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Ukraine.png
+印度时延优选 = url-test,印度节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/India.png
+澳大利亚时延优选 = url-test,澳大利亚节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Australia.png
+新西兰时延优选 = url-test,新西兰节点,interval = 60,tolerance = 50,img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Flag_icon/120px/NZ.png
+联合国时延优选 = url-test,联合国节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
+# 兜底策略后备
+兜底后备策略 = fallback,香港时延优选,台湾时延优选,日本时延优选,韩国时延优选,新国时延优选,美国时延优选,英国时延优选,澳门时延优选,巴西时延优选,德国时延优选,马来西亚时延优选,泰国时延优选,荷兰时延优选,尼日利亚时延优选,土耳其时延优选,乌克兰时延优选,印度时延优选,澳大利亚时延优选,联合国时延优选,菲律宾时延优选,新西兰时延优选,interval = 60,max-timeout = 2000,img-url = https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/fallback.png
+
+[Rule]
+# Local Rule
+# Type:DOMAIN-SUFFIX,DOMAIN,DOMAIN-KEYWORD,USER-AGENT,URL-REGEX,IP-CIDR,IP-CIDR6,IP-ASN
+# Strategy:DIRECT,Proxy,REJECT
+# Options:no-resolve(no-resolve(only for cidr))
+# IP-CIDR, 192.168.0.0/16, DIRECT
+# IP-CIDR, 10.0.0.0/8, DIRECT
+# IP-CIDR, 172.16.0.0/12, DIRECT
+# IP-CIDR, 127.0.0.0/8, DIRECT
+# 配置文件已自带远程GEOIP, cn, DIRECT规则，请勿在此添加
+# 请勿修改远程CN REGION规则的排序甚至删除
+
+
+# ——— 官方域名 ———
+# CF 菲律宾服官网（旧版）
+DOMAIN-SUFFIX,gameclub.ph,菲律宾时延优选
+
+# 精确匹配旧官网主域名
+DOMAIN,cf.gameclub.ph,菲律宾时延优选
+
+# 论坛相关可能的域名
+DOMAIN-SUFFIX,forums.gameclub.ph,菲律宾时延优选
+
+# 支援或下载相关页面
+DOMAIN-SUFFIX,download.gameclub.ph,菲律宾时延优选
+
+# 支援知识库
+DOMAIN-SUFFIX,gameclubph.zendesk.com,菲律宾时延优选
+
+# ——— 当前官方 Stove 平台 ———
+DOMAIN-SUFFIX,onstove.com,菲律宾时延优选
+
+DOMAIN,cfph.onstove.com,菲律宾时延优选
+
+# ——— 通用域名处理 ———
+# 如果仅希望访问官网流量走代理/直连，可使用如下泛规则
+#DOMAIN-SUFFIX,gameclub.ph,菲律宾时延优选
+
+FINAL,兜底后备策略
+
+[Remote Rule]
+https://adrules.top/adrules.list, policy=REJECT, tag=adrules.list, enabled=true
+https://rule.kelee.one/Loon/Telegram.lsr, policy=兜底后备策略, tag=Telegram, enabled=true
+https://kelee.one/Tool/Loon/Lsr/TikTok.lsr, policy=新国手动策略, tag=TikTok, enabled=true
+https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=美国手动策略, tag=AI, enabled=true
+https://kelee.one/Tool/Loon/Lsr/AppleAccount.lsr, policy=DIRECT, tag=Apple Account, enabled=true
+https://kelee.one/Tool/Loon/Lsr/AppStore.lsr, policy=DIRECT, tag=App Store, enabled=false
+https://rule.kelee.one/Loon/GitHub.lsr, policy=兜底后备策略, tag=GitHub, enabled=true
+https://rule.kelee.one/Loon/Netflix.lsr, policy=新国手动策略, tag=Netflix, enabled=true
+https://rule.kelee.one/Loon/YouTube.lsr, policy=兜底后备策略, tag=Youtube, enabled=true
+https://rule.kelee.one/Loon/Disney.lsr, policy=香港手动策略, tag=Disney, enabled=true
+https://rule.kelee.one/Loon/Twitter.lsr, policy=香港时延优选, tag=Twitter, enabled=true
+https://rule.kelee.one/Loon/Facebook.lsr, policy=兜底后备策略, tag=Facebook, enabled=false
+https://rule.kelee.one/Loon/Instagram.lsr, policy=兜底后备策略, tag=Instagram, enabled=false
+https://rule.kelee.one/Loon/Spotify.lsr, policy=香港手动策略, tag=Spotify, enabled=true
+https://rule.kelee.one/Loon/Google.lsr, policy=兜底后备策略, tag=Google, enabled=false
+https://rule.kelee.one/Loon/OneDrive.lsr, policy=兜底后备策略, tag=OneDrive, enabled=false
+https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER, policy=DIRECT, tag=LAN, enabled=true
+https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER, policy=DIRECT, tag=CN REGION, enabled=true
+
+[Host]
+
+[Rewrite]
+
+[Script]
+[Plugin]
+https://raw.githubusercontent.com/WeiGiegie/666/main/panda.js, tag=百度网盘分享下载不限速, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/BaiduNetDisk.png, enabled=true
+https://kelee.one/Tool/Loon/Lpx/MeiTu_remove_ads.lpx, enabled=false
+https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx, enabled=false
+https://kelee.one/Tool/Loon/Lpx/Soul_remove_ads.lpx, enabled=false
+https://kelee.one/Tool/Loon/Lpx/Switch_github_mirror.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/SafetyHome_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Weixin_external_links_unlock.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/WexinMiniPrograms_Remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Weixin_Official_Accounts_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/YouTube_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/LoonGallery.lpx, policy=兜底后备策略, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, enabled=false
+https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx, enabled=false
+https://kelee.one/Tool/Loon/Lpx/QuickSearch.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx, policy=兜底后备策略, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/TestFlightRegionUnlock.lpx, policy=DIRECT, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BoxJs.lpx, policy=兜底后备策略, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=兜底后备策略, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx, policy=兜底后备策略, enabled=true
+
+[Mitm]
+ca-p12 = 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
+ca-passphrase = 2T540UKZ
+hostname =
+ca-p12 = 
+ca-passphrase = 
+skip-server-cert-verify = false
