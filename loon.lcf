@@ -54,6 +54,15 @@ XTcloud = https://data.xtcloud.org/api/v1/client/subscribe?token=30da5d6c915e607
 新西兰节点 = NameRegex, FilterKey = "^(?=.*((?i)🇳🇿|新西兰|奥克兰|惠灵顿|(\b(NZ|NZL|NewZealand|Auckland|Wellington)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 联合国节点 = NameRegex, FilterKey = "^(?=.*((?i)🇺🇳|联合国|(\b(UN|UnitedNations)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 菲律宾节点 = NameRegex, FilterKey = "^(?=.*(🇵🇭|菲|大马|\\bPH\\b|Philippines))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
+越南节点 = NameRegex, FilterKey = "^(?=.*((?i)🇻🇳|越南|河内|胡志明|(\b(VN|VNM|Vietnam|Hanoi|Saigon|HoChiMinh)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+
+墨西哥节点 = NameRegex, FilterKey = "^(?=.*((?i)🇲🇽|墨西哥|墨城|瓜达拉哈拉|(\b(MX|MEX|Mexico|CDMX|Guadalajara)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+
+摩尔多瓦节点 = NameRegex, FilterKey = "^(?=.*((?i)🇲🇩|摩尔多瓦|基希讷乌|(\b(MD|MDA|Moldova|Chisinau)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+
+印度尼西亚节点 = NameRegex, FilterKey = "^(?=.*((?i)🇮🇩|印尼|印度尼西亚|雅加达|巴厘|(\b(ID|IDN|Indonesia|Jakarta|Bali)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+
+法国节点 = NameRegex, FilterKey = "^(?=.*((?i)🇫🇷|法国|巴黎|马赛|(\b(FR|FRA|France|Paris|Marseille)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 游戏节点 = NameRegex, FilterKey = "^(?=.*((?i)游戏|🎮|(\b(GAME)(\d+)?\b)))(?!.*((?i)回国|校园)).*$"
 全球节点 = NameRegex, FilterKey = "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|超时|收藏|福利|邀请|好友|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic)(\d+)?\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$"
 
@@ -92,6 +101,11 @@ XTcloud = https://data.xtcloud.org/api/v1/client/subscribe?token=30da5d6c915e607
 # 联合国
 联合国手动策略 = select,联合国节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
 菲律宾手动策略 = select,菲律宾节点,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Philippines.png
+越南手动策略 = select,越南节点,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Vietnam.png
+墨西哥手动策略 = select,墨西哥节点,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Mexico.png
+摩尔多瓦手动策略 = select,摩尔多瓦节点,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Moldova.png
+印度尼西亚手动策略 = select,印度尼西亚节点,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Indonesia.png
+法国手动策略 = select,法国节点,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/France.png
 游戏手动策略 = select,游戏节点,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/GAME.png
 全球手动策略 = select,全球节点,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
 # --------------------------------
@@ -117,9 +131,14 @@ XTcloud = https://data.xtcloud.org/api/v1/client/subscribe?token=30da5d6c915e607
 印度时延优选 = url-test,印度节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/India.png
 澳大利亚时延优选 = url-test,澳大利亚节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Australia.png
 新西兰时延优选 = url-test,新西兰节点,interval = 60,tolerance = 50,img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Flag_icon/120px/NZ.png
+越南时延优选 = url-test,越南节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Vietnam.png
+墨西哥时延优选 = url-test,墨西哥节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Mexico.png
+摩尔多瓦时延优选 = url-test,摩尔多瓦节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Moldova.png
+印度尼西亚时延优选 = url-test,印度尼西亚节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Indonesia.png
+法国时延优选 = url-test,法国节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/France.png
 联合国时延优选 = url-test,联合国节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
 # 兜底策略后备
-兜底后备策略 = fallback,香港时延优选,台湾时延优选,日本时延优选,韩国时延优选,新国时延优选,美国时延优选,英国时延优选,澳门时延优选,巴西时延优选,德国时延优选,马来西亚时延优选,泰国时延优选,荷兰时延优选,尼日利亚时延优选,土耳其时延优选,乌克兰时延优选,印度时延优选,澳大利亚时延优选,联合国时延优选,菲律宾时延优选,新西兰时延优选,interval = 60,max-timeout = 2000,img-url = https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/fallback.png
+兜底后备策略 = fallback,香港时延优选,台湾时延优选,日本时延优选,韩国时延优选,新国时延优选,美国时延优选,英国时延优选,澳门时延优选,法国时延优选,越南时延优选,印度尼西亚时延优选,墨西哥时延优选,摩尔多瓦时延优选,巴西时延优选,德国时延优选,马来西亚时延优选,泰国时延优选,荷兰时延优选,尼日利亚时延优选,土耳其时延优选,乌克兰时延优选,印度时延优选,澳大利亚时延优选,联合国时延优选,菲律宾时延优选,新西兰时延优选,interval = 60,max-timeout = 2000,img-url = https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/fallback.png
 
 [Rule]
 # Local Rule
@@ -188,9 +207,9 @@ https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER, policy=DIRECT, tag=CN REGION, e
 [Script]
 [Plugin]
 https://raw.githubusercontent.com/WeiGiegie/666/main/panda.js, tag=百度网盘分享下载不限速, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/BaiduNetDisk.png, enabled=true
-https://kelee.one/Tool/Loon/Lpx/MeiTu_remove_ads.lpx, enabled=false
-https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx, enabled=false
-https://kelee.one/Tool/Loon/Lpx/Soul_remove_ads.lpx, enabled=false
+https://kelee.one/Tool/Loon/Lpx/MeiTu_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Soul_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Switch_github_mirror.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/SafetyHome_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Weixin_external_links_unlock.lpx, enabled=true
