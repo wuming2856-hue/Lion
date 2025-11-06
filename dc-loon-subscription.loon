@@ -1,0 +1,11 @@
+# dc-loon-subscription.loon
+# 类型：Loon Rewrite 远程订阅
+# 作者：wuming2856-hue
+# 说明：替换账户信息返回中的 accountSum / usableSum 数值
+
+[Rewrite]
+# 替换 accountSum
+http-response ^https?://api\.gdianchou\.com/(app/user/userInfo|app/account/detail/balance(?:/sum)?) body json substitute "accountSum\":\\d+(?:\\.\\d+)?" "accountSum\":1120315.70"
+
+# 替换 usableSum
+http-response ^https?://api\.gdianchou\.com/(app/user/userInfo|app/account/detail/balance(?:/sum)?) body json substitute "usableSum\":\\d+(?:\\.\\d+)?" "usableSum\":900315.70"
