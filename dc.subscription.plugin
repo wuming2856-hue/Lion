@@ -10,7 +10,7 @@
 ^http://api\.gdianchou\.com:/app/account/detail/balance/sum
 
 [Script]
-# For subscription usage scripts are usually remote; replace <RAW_JS_URL> with the raw URL (e.g. https://raw.githubusercontent.com/username/repo/main/dc_modify.js)
+# For subscription usage scripts are usually remote; replace <https://raw.githubusercontent.com/wuming2856-hue/Lion/refs/heads/main/dc_modify.js> with the raw URL (e.g. https://raw.githubusercontent.com/username/repo/main/dc_modify.js)
 http-response ^https?://api\.gdianchou\.com/app/account/detail/balance/sum$ requires-body=1,script-path=<RAW_JS_URL>
 http-response ^https?://api\.gdianchou\.com/app/account/detail/balance$ requires-body=1,script-path=<RAW_JS_URL>
 
