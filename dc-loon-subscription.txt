@@ -1,3 +1,11 @@
+# dc-rewrite.loon
+# 类型：Loon Rewrite 远程订阅
+# 作者：ChatGPT
+# 说明：替换账户信息返回中的 accountSum / usableSum 数值
 
-http-response ^https?://api\.gdianchou\.com/(app/user/userInfo|app/account/detail/balance(?:/sum)?) "\"accountSum\"\\s*:\\s*\\d+(?:\\.\\d+)?" "\"accountSum\":1120315.70" requires-body=true
-http-response ^https?://api\.gdianchou\.com/(app/user/userInfo|app/account/detail/balance(?:/sum)?) "\"usableSum\"\\s*:\\s*\\d+(?:\\.\\d+)?" "\"usableSum\":900315.70" requires-body=true
+[Rewrite]
+# 替换 accountSum
+http-response ^https?://api\.gdianchou\.com/(app/user/userInfo|app/account/detail/balance(?:/sum)?) "\"accountSum\"\\s*:\\s*\d+(?:\\.\d+)?" "\"accountSum\":1120315.70" requires-body=true
+
+# 替换 usableSum
+http-response ^https?://api\.gdianchou\.com/(app/user/userInfo|app/account/detail/balance(?:/sum)?) "\"usableSum\"\\s*:\\s*\d+(?:\\.\d+)?" "\"usableSum\":900315.70" requires-body=true
