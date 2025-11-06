@@ -12,13 +12,13 @@ http-response ^https?://api\.gdianchou\.com/(app/user/userInfo|app/account/detai
 
 # ---------- 可选（更严格：对每个 path 明确列出，若需要请取消下面行的注释） ----------
 # 下面示例把三个路径分别列出（每个路径两行），按需取消注释并启用
-# http-response ^https?://api\.gdianchou\.com/app/user/userInfo "\"accountSum\"\\s*:\\s*\\d+(?:\\.\\d+)?" "\"accountSum\":1120315.70" requires-body=true
-# http-response ^https?://api\.gdianchou\.com/app/user/userInfo "\"usableSum\"\\s*:\\s*\\d+(?:\\.\\d+)?" "\"usableSum\":900315.70" requires-body=true
+http-response ^https?://api\.gdianchou\.com/app/user/userInfo "\"accountSum\"\\s*:\\s*\\d+(?:\\.\\d+)?" "\"accountSum\":1120315.70" requires-body=true
+http-response ^https?://api\.gdianchou\.com/app/user/userInfo "\"usableSum\"\\s*:\\s*\\d+(?:\\.\\d+)?" "\"usableSum\":900315.70" requires-body=true
 
-# http-response ^https?://api\.gdianchou\.com/app/account/detail/balance "\"accountSum\"\\s*:\\s*\\d+(?:\\.\\d+)?" "\"accountSum\":1120315.70" requires-body=true
-# http-response ^https?://api\.gdianchou\.com/app/account/detail/balance "\"usableSum\"\\s*:\\s*\\d+(?:\\.\\d+)?" "\"usableSum\":900315.70" requires-body=true
+http-response ^https?://api\.gdianchou\.com/app/account/detail/balance "\"accountSum\"\\s*:\\s*\\d+(?:\\.\\d+)?" "\"accountSum\":1120315.70" requires-body=true
+http-response ^https?://api\.gdianchou\.com/app/account/detail/balance "\"usableSum\"\\s*:\\s*\\d+(?:\\.\\d+)?" "\"usableSum\":900315.70" requires-body=true
 
-# http-response ^https?://api\.gdianchou\.com/app/account/detail/balance/sum "\"accountSum\"\\s*:\\s*\\d+(?:\\.\\d+)?" "\"accountSum\":1120315.70" requires-body=true
-# http-response ^https?://api\.gdianchou\.com/app/account/detail/balance/sum "\"usableSum\"\\s*:\\s*\\d+(?:\\.\\d+)?" "\"usableSum\":900315.70" requires-body=true
+http-response ^https?://api\.gdianchou\.com/app/account/detail/balance/sum "\"accountSum\"\\s*:\\s*\\d+(?:\\.\\d+)?" "\"accountSum\":1120315.70" requires-body=true
+http-response ^https?://api\.gdianchou\.com/app/account/detail/balance/sum "\"usableSum\"\\s*:\\s*\\d+(?:\\.\\d+)?" "\"usableSum\":900315.70" requires-body=true
 
 # 末尾说明：如果你的目标接口确认为 http 而非 https，可把上面的 ^https?:// 改成 ^http:// ，但推荐保持 https? 以兼容两种。
