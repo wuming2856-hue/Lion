@@ -1,10 +1,9 @@
-// my-script.js
-let body = $response.body;
+[Rewrite]
+# 规则1：修改 accountSum 值
+^https?:\/\/api\.gdianchou\.com\/(app\/user\/userInfo|app\/account\/detail\/balance|app\/account\/detail\/balance\/sum) url response-body ("accountSum"\s*:\s*)\d+(\.\d+)? "$11120315.70"
 
-// 替换 "accountSum"
-body = body.replace(/"accountSum"\s*:\s*\d+(\.\d+)?/, '"accountSum":1120315.70');
+# 规则2：修改 usableSum 值  
+^https?:\/\/api\.gdianchou\.com\/(app\/user\/userInfo|app\/account\/detail\/balance|app\/account\/detail\/balance\/sum) url response-body ("usableSum"\s*:\s*)\d+(\.\d+)? "$1900315.70"
 
-// 替换 "usableSum"
-body = body.replace(/"usableSum"\s*:\s*\d+(\.\d+)?/, '"usableSum":900315.70');
-
-$done({ body });
+[MitM]
+hostname = api.gdianchou.com
