@@ -1,23 +1,59 @@
+# =========================
+# 基础设置
+# =========================
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: false
+
+# =========================
+# 机场节点订阅（proxy-providers）
+# ⚠️ 这是你 xtcloud 的订阅
+# =========================
+proxy-providers:
+  xtcloud:
+    type: http
+    url: https://data.xtcloud.org/api/v1/client/subscribe?token=30da5d6c915e6079650693a24a0d8893
+    interval: 3600
+    path: ./providers/xtcloud.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+
+# =========================
+# 代理组
+# =========================
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    use:
+      - xtcloud
+
+  - name: 🇵🇭 菲律宾
+    type: select
+    use:
+      - xtcloud
+
+# =========================
+# 规则订阅（rule-providers）
+# ⚠️ 这是你 GitHub 的菲律宾规则
+# =========================
 rule-providers:
   PH-GameClub:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/wuming2856-hue/Lion/refs/heads/main/ph_gameclub.yaml
-    path: ./ruleset/PH-GameClub.yaml
+    url: https://raw.githubusercontent.com/USERNAME/REPO/main/ph_gameclub.yaml
     interval: 86400
+    path: ./ruleset/ph_gameclub.yaml
 
-  My-Subscription:
-    type: http
-    behavior: classical
-    url: https://data.xtcloud.org/api/v1/client/subscribe?token=30da5d6c915e6079650693a24a0d8893
-    path: ./ruleset/My-Subscription.yaml
-    interval: 86400
+# =========================
+# 规则（顺序 = 优先级）
+# =========================
 rules:
-    # 菲律宾规则订阅（最高优先级）
-    - 'RULE-SET,PH-GameClub,[Any]🇵🇭 R&R 00【1x 家寬】'
+  # 菲律宾游戏规则（最高优先级）
+  - 'RULE-SET,PH-GameClub,🇵🇭 菲律宾'
 
-    # 原来的规则订阅
-    - 'RULE-SET,My-Subscription,🌐 订阅规则'
-
-    # 兜底规则
-    - 'MATCH,🍥 其他'
+  # 兜底规则
+  - 'MATCH,🚀 节点选择'
