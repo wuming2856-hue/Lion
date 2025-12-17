@@ -1,0 +1,23 @@
+rule-providers:
+  PH-GameClub:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/USERNAME/REPO/main/ph_gameclub.yaml
+    path: ./ruleset/PH-GameClub.yaml
+    interval: 86400
+
+  My-Subscription:
+    type: http
+    behavior: classical
+    url: https://data.xtcloud.org/api/v1/client/subscribe?token=30da5d6c915e6079650693a24a0d8893
+    path: ./ruleset/My-Subscription.yaml
+    interval: 86400
+rules:
+    # 菲律宾规则订阅（最高优先级）
+    - 'RULE-SET,PH-GameClub,[Any]🇵🇭 R&R 00【1x 家寬】'
+
+    # 原来的规则订阅
+    - 'RULE-SET,My-Subscription,🌐 订阅规则'
+
+    # 兜底规则
+    - 'MATCH,🍥 其他'
