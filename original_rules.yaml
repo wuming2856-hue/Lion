@@ -2,7 +2,7 @@ rule-providers:
   PH-GameClub:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/USERNAME/REPO/main/ph_gameclub.yaml
+    url: https://raw.githubusercontent.com/wuming2856-hue/Lion/refs/heads/main/ph_gameclub.yaml
     path: ./ruleset/PH-GameClub.yaml
     interval: 86400
 
