@@ -1,0 +1,13 @@
+# ph_nodes.yaml
+# 菲律宾节点自定义规则订阅
+# 仅匹配菲律宾游戏相关域名，优先走指定节点
+
+rules:
+    - 'DOMAIN-SUFFIX,gameclub.ph,[Any]🇵🇭 R&R 00【1x 家寬】'
+    - 'DOMAIN-SUFFIX,cf.gameclub.ph,[Any]🇵🇭 R&R 00【1x 家寬】'
+    - 'DOMAIN-SUFFIX,forums.gameclub.ph,[Any]🇵🇭 R&R 00【1x 家寬】'
+    - 'DOMAIN-SUFFIX,download.gameclub.ph,[Any]🇵🇭 R&R 00【1x 家寬】'
+    - 'DOMAIN-SUFFIX,gameclubph.zendesk.com,[Any]🇵🇭 R&R 00【1x 家寬】'
+    - 'DOMAIN-SUFFIX,onstove.com,[Any]🇵🇭 R&R 00【1x 家寬】'
+    - 'DOMAIN-SUFFIX,cfph.onstove.com,[Any]🇵🇭 R&R 00【1x 家寬】'
+    - 'MATCH,DIRECT'
