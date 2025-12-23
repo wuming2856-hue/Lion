@@ -128,7 +128,6 @@ rules:
     - 'DOMAIN,gameclubph.zendesk.com,🎮 游戏官网（PH）'
     - 'DOMAIN-SUFFIX,onstove.com,🎮 游戏官网（PH）'
     - 'DOMAIN,cfph.onstove.com,🎮 游戏官网（PH）'
-    - 'RULE-SET,AWAvenue-Ads,🍃 广告拦截'
     - 'GEOSITE,biliintl,🅱️ 哔哩东南亚'
     - 'GEOSITE,bilibili,🅱️ 哔哩哔哩'
     - 'GEOSITE,apple,🍎 Apple'
