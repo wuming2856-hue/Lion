@@ -153,7 +153,6 @@ rules:
     - 'GEOIP,google,🌍 Google'
     - 'GEOIP,netflix,🌍 NETFLIX'
     - 'GEOIP,telegram,📲 Telegram'
-    - 'GEOIP,PH,🇵🇭 CF-菲律宾'
     - 'GEOIP,twitter,🌍 Twitter'
     - 'GEOSITE,cn,🇨🇳 中國大陸'
     - 'GEOIP,cn,🇨🇳 中國大陸'
